@@ -1,19 +1,15 @@
-import { useEffect, useState } from "react"
 import Category from "./Category"
-import { fetchData } from "../../utilis/fetchData"
-
+import useData from "../../hooks/useData"
 export default function Categories({ pickCategory }) {
-    const [categories, setCategories] = useState([])
-    useEffect(() => {
-      fetchData('list.php?c=list')
-        .then((data) => setCategories(data.drinks))
-    }, [])
+
+    const {data} = useData('list.php?c=list')
+
   
     return (
       <ul className='w-full p-8'>
   
-        {
-          categories.map((drink, index) =>
+        {data &&
+          data?.drinks.map((drink, index) =>
             <Category
               key={index}
               category={drink.strCategory}
