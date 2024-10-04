@@ -17,7 +17,7 @@ export default function App() {
     setScategory(category)
   }
 
-  return (
+  return ( 
     <div className='flex h-screen'>
       <aside className='w-80 h-full bg-cyan-800 shrink-0'>
         <Searchbar />
@@ -37,7 +37,4 @@ export default function App() {
     </div>
   )
 }
-
-
-
-
+ 

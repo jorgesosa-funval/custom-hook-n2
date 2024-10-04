@@ -2,14 +2,14 @@ import Category from "./Category"
 import useData from "../../hooks/useData"
 export default function Categories({ pickCategory }) {
 
-    const {data} = useData('list.php?c=list')
-
+    const {data} = useData('list.php?c=list', 'category')
+    
   
     return (
       <ul className='w-full p-8'>
   
         {data &&
-          data?.drinks.map((drink, index) =>
+          data?.data?.drinks.map((drink, index) =>
             <Category
               key={index}
               category={drink.strCategory}
