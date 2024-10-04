@@ -10,22 +10,22 @@ export default function Drinks({ category }) {
     return (
 
         <>
-            { !loading ?
-            
-            <ul className='grid auto-column place-content-center mt-8 p-8 gap-8  overflow-y-scroll '>
-                {data &&
-                    data.drinks.map(drink =>
-                        <Drink
-                            key={drink.idDrink}
-                            drink={drink}
-                        />
-                    )}
-            </ul> :
+            {!loading ?
 
-            <h2 className="text-3xl text-black">Loading...</h2>
+                <ul className='grid auto-column justify-center p-8 gap-8  overflow-y-scroll '>
+                    {data &&
+                        data.drinks.map(drink =>
+                            <Drink
+                                key={drink.idDrink}
+                                drink={drink}
+                            />
+                        )}
+                </ul> :
+
+                <h2 className="text-3xl text-black">Loading...</h2>
 
             }
-           
+
             {
                 error &&
                 <Modal

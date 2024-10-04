@@ -27,7 +27,7 @@ export default function App() {
 
       </aside>
       <main className= 'flex flex-col flex-grow  overflow-hidden'>
-        <nav className='w-full h-16 bg-cyan-950'>
+        <nav className='w-full h-16 bg-cyan-950 shrink-0'>
 
         </nav>
         <Drinks
